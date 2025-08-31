@@ -40,7 +40,7 @@
                     <div
                         class="life flex rounded-[50px] bg-green-100 p-3 w-[123px] gap-[10px] justify-center items-center">
                         <span>
-                            <p id="life-count" class="text-base font-semibold">0</p>
+                            <p class="life-count text-base font-semibold">0</p>
                         </span>
                         <img src="./assets/heart.png" alt=""
                             class="heart w-[25.79px] h-[22.99px] mx-[2.11px] my-[3.51px]" />
@@ -49,20 +49,21 @@
                     <div
                         class="coin flex justify-center gap-[10px] bg-green-100 w-[103px] items-center p-3 rounded-[50px]">
                         <span>
-                            <p id="coin-count" class="text-base font-semibold">100</p>
+                            <p class="coin-count text-base font-semibold">100</p>
                         </span>
                         <img src="./assets/coin.png" alt="" class="coin w-[23.25px] h-[23.22px]" />
                     </div>
                     <div
-                        class="copy-count bg-green-500 px-9 py-3 w-[127px] flex justify-center items-center rounded-[50px]">
-                        <p class="text-white font-semibold text-base">2 Copy</p>
+                        class="copy-counts bg-green-500 px-9 py-3 w-[127px] flex justify-center items-center rounded-[50px]">
+                        <p class="text-white font-semibold text-base flex gap-2"><span class="copy-count">0</span> Copy
+                        </p>
                     </div>
                 </div>
             </div>
         </nav>
     </header>
-    <main>
-        <section class="banner text-white mb-12" style="font-family: 'Hind Madurai', sans-serif">
+    <main class="mb-12">
+        <section class="hero text-white mb-12" style="font-family: 'Hind Madurai', sans-serif">
             <div
                 class="banner-container max-w-[1920px] mx-auto px-[60px] py-3 bg-[linear-gradient(90deg,#013223_0%,#006747_50%,#013223_100%)] flex flex-col justify-center items-center gap-[11px]">
                 <img src="./assets/logo-dark.png" alt="" class="banner-logo max-w-[92px] h-[92px] w-full" />
@@ -86,8 +87,8 @@
                                 <img src="./assets/emergency.png" alt="" class="w-8 h-8" />
                             </div>
 
-                            <img id="life" src="./assets/heart2.png" alt=""
-                                class="w-[20px] h-[18.35px] hover:cursor-pointer" />
+                            <img src="./assets/heart2.png" alt=""
+                                class="lives w-[20px] h-[18.35px] hover:cursor-pointer" />
                         </div>
                         <div class="card-heading mb-2">
                             <h2 class="font-bold text-[24px] service" style="font-family: 'Hind Madurai', sans-serif">
@@ -96,7 +97,7 @@
                             <p class="text-[18px] text-gray-500">National Emergency</p>
                         </div>
                         <div class="emergency-number mb-2">
-                            <h2 class="font-bold text-[32px] mb-2" style="font-family: 'Roboto', sans-serif">
+                            <h2 class="number font-bold text-[32px] mb-2" style="font-family: 'Roboto', sans-serif">
                                 999
                             </h2>
                             <p id="emergency-tag"
@@ -107,13 +108,210 @@
                         </div>
                         <div class="actions gap-4 flex justify-between text-base"
                             style="font-family: 'Roboto', sans-serif">
-                            <button id="copy"
-                                class="border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] hover:cursor-pointer hover:bg-gray-700 duration-500 hover:text-white">
+                            <button
+                                class="copy border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] hover:cursor-pointer hover:bg-gray-700 duration-500 hover:text-white">
                                 <img src="./assets/copy.png" alt="" class="w-4 h-4" />
                                 Copy
                             </button>
-                            <button id="call"
-                                class="border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] bg-green-600 text-white hover:cursor-pointer justify-center duration-500 hover:bg-green-700">
+                            <button
+                                class="call border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] bg-green-600 text-white hover:cursor-pointer justify-center duration-500 hover:bg-green-700">
+                                <img src="./assets/call.png" alt="" />
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box w-full flex bg-white flex-col gap-4 p-8 rounded-[12px]">
+                        <div class="card-header flex justify-between items-center">
+                            <div class="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] bg-red-200">
+                                <img src="./assets/emergency.png" alt="" class="w-8 h-8" />
+                            </div>
+
+                            <img src="./assets/heart2.png" alt=""
+                                class="lives w-[20px] h-[18.35px] hover:cursor-pointer" />
+                        </div>
+                        <div class="card-heading mb-2">
+                            <h2 class="font-bold text-[24px] service" style="font-family: 'Hind Madurai', sans-serif">
+                                Police Helpline
+                            </h2>
+                            <p class="text-[18px] text-gray-500">Police</p>
+                        </div>
+                        <div class="emergency-number mb-2">
+                            <h2 class="number font-bold text-[32px] mb-2" style="font-family: 'Roboto', sans-serif">
+                                999
+                            </h2>
+                            <p id="emergency-tag"
+                                class="text-[18px] text-gray-400 bg-gray-200 w-fit px-4 py-[6px] rounded-2xl"
+                                style="font-family: 'Hind Madurai', sans-serif">
+                                Police
+                            </p>
+                        </div>
+                        <div class="actions gap-4 flex justify-between text-base"
+                            style="font-family: 'Roboto', sans-serif">
+                            <button
+                                class="copy border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] hover:cursor-pointer hover:bg-gray-700 duration-500 hover:text-white">
+                                <img src="./assets/copy.png" alt="" class="w-4 h-4" />
+                                Copy
+                            </button>
+                            <button
+                                class="call border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] bg-green-600 text-white hover:cursor-pointer justify-center duration-500 hover:bg-green-700">
+                                <img src="./assets/call.png" alt="" />
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box w-full flex bg-white flex-col gap-4 p-8 rounded-[12px]">
+                        <div class="card-header flex justify-between items-center">
+                            <div class="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] bg-red-200">
+                                <img src="./assets/emergency.png" alt="" class="w-8 h-8" />
+                            </div>
+
+                            <img src="./assets/heart2.png" alt=""
+                                class="lives w-[20px] h-[18.35px] hover:cursor-pointer" />
+                        </div>
+                        <div class="card-heading mb-2">
+                            <h2 class="font-bold text-[24px] service" style="font-family: 'Hind Madurai', sans-serif">
+                                Fire Service Number
+                            </h2>
+                            <p class="text-[18px] text-gray-500">Fire Service</p>
+                        </div>
+                        <div class="emergency-number mb-2">
+                            <h2 class="number font-bold text-[32px] mb-2" style="font-family: 'Roboto', sans-serif">
+                                999
+                            </h2>
+                            <p id="emergency-tag"
+                                class="text-[18px] text-gray-400 bg-gray-200 w-fit px-4 py-[6px] rounded-2xl"
+                                style="font-family: 'Hind Madurai', sans-serif">
+                                Fire
+                            </p>
+                        </div>
+                        <div class="actions gap-4 flex justify-between text-base"
+                            style="font-family: 'Roboto', sans-serif">
+                            <button
+                                class="copy border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] hover:cursor-pointer hover:bg-gray-700 duration-500 hover:text-white">
+                                <img src="./assets/copy.png" alt="" class="w-4 h-4" />
+                                Copy
+                            </button>
+                            <button
+                                class="call border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] bg-green-600 text-white hover:cursor-pointer justify-center duration-500 hover:bg-green-700">
+                                <img src="./assets/call.png" alt="" />
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box w-full flex bg-white flex-col gap-4 p-8 rounded-[12px]">
+                        <div class="card-header flex justify-between items-center">
+                            <div class="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] bg-red-200">
+                                <img src="./assets/emergency.png" alt="" class="w-8 h-8" />
+                            </div>
+
+                            <img src="./assets/heart2.png" alt=""
+                                class="lives w-[20px] h-[18.35px] hover:cursor-pointer" />
+                        </div>
+                        <div class="card-heading mb-2">
+                            <h2 class="font-bold text-[24px] service" style="font-family: 'Hind Madurai', sans-serif">
+                                Ambulance Service
+                            </h2>
+                            <p class="text-[18px] text-gray-500">Ambulance</p>
+                        </div>
+                        <div class="emergency-number mb-2">
+                            <h2 class="number font-bold text-[32px] mb-2" style="font-family: 'Roboto', sans-serif">
+                                1994-999999
+                            </h2>
+                            <p id="emergency-tag"
+                                class="text-[18px] text-gray-400 bg-gray-200 w-fit px-4 py-[6px] rounded-2xl"
+                                style="font-family: 'Hind Madurai', sans-serif">
+                                Health
+                            </p>
+                        </div>
+                        <div class="actions gap-4 flex justify-between text-base"
+                            style="font-family: 'Roboto', sans-serif">
+                            <button
+                                class="copy border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] hover:cursor-pointer hover:bg-gray-700 duration-500 hover:text-white">
+                                <img src="./assets/copy.png" alt="" class="w-4 h-4" />
+                                Copy
+                            </button>
+                            <button
+                                class="call border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] bg-green-600 text-white hover:cursor-pointer justify-center duration-500 hover:bg-green-700">
+                                <img src="./assets/call.png" alt="" />
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box w-full flex bg-white flex-col gap-4 p-8 rounded-[12px]">
+                        <div class="card-header flex justify-between items-center">
+                            <div class="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] bg-red-200">
+                                <img src="./assets/emergency.png" alt="" class="w-8 h-8" />
+                            </div>
+
+                            <img src="./assets/heart2.png" alt=""
+                                class="lives w-[20px] h-[18.35px] hover:cursor-pointer" />
+                        </div>
+                        <div class="card-heading mb-2">
+                            <h2 class="font-bold text-[24px] service" style="font-family: 'Hind Madurai', sans-serif">
+                                Woman& Child Helpline
+                            </h2>
+                            <p class="text-[18px] text-gray-500">Woman & Child Helpline
+                            </p>
+                        </div>
+                        <div class="emergency-number mb-2">
+                            <h2 class="number font-bold text-[32px] mb-2" style="font-family: 'Roboto', sans-serif">
+                                109
+                            </h2>
+                            <p id="emergency-tag"
+                                class="text-[18px] text-gray-400 bg-gray-200 w-fit px-4 py-[6px] rounded-2xl"
+                                style="font-family: 'Hind Madurai', sans-serif">
+                                Help
+                            </p>
+                        </div>
+                        <div class="actions gap-4 flex justify-between text-base"
+                            style="font-family: 'Roboto', sans-serif">
+                            <button
+                                class="copy border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] hover:cursor-pointer hover:bg-gray-700 duration-500 hover:text-white">
+                                <img src="./assets/copy.png" alt="" class="w-4 h-4" />
+                                Copy
+                            </button>
+                            <button
+                                class="call border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] bg-green-600 text-white hover:cursor-pointer justify-center duration-500 hover:bg-green-700">
+                                <img src="./assets/call.png" alt="" />
+                                Call
+                            </button>
+                        </div>
+                    </div>
+                    <div class="box w-full flex bg-white flex-col gap-4 p-8 rounded-[12px]">
+                        <div class="card-header flex justify-between items-center">
+                            <div class="w-[60px] h-[60px] flex items-center justify-center rounded-[16px] bg-red-200">
+                                <img src="./assets/emergency.png" alt="" class="w-8 h-8" />
+                            </div>
+
+                            <img src="./assets/heart2.png" alt=""
+                                class="lives w-[20px] h-[18.35px] hover:cursor-pointer" />
+                        </div>
+                        <div class="card-heading mb-2">
+                            <h2 class="font-bold text-[24px] service" style="font-family: 'Hind Madurai', sans-serif">
+                                Anti-Corruption Helpline
+                            </h2>
+                            <p class="text-[18px] text-gray-500">Anti-Corruption
+                            </p>
+                        </div>
+                        <div class="emergency-number mb-2">
+                            <h2 class="number font-bold text-[32px] mb-2" style="font-family: 'Roboto', sans-serif">
+                                106
+                            </h2>
+                            <p id="emergency-tag"
+                                class="text-[18px] text-gray-400 bg-gray-200 w-fit px-4 py-[6px] rounded-2xl"
+                                style="font-family: 'Hind Madurai', sans-serif">
+                                Govt.
+                            </p>
+                        </div>
+                        <div class="actions gap-4 flex justify-between text-base"
+                            style="font-family: 'Roboto', sans-serif">
+                            <button
+                                class="copy border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] hover:cursor-pointer hover:bg-gray-700 duration-500 hover:text-white">
+                                <img src="./assets/copy.png" alt="" class="w-4 h-4" />
+                                Copy
+                            </button>
+                            <button
+                                class="call border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] bg-green-600 text-white hover:cursor-pointer justify-center duration-500 hover:bg-green-700">
                                 <img src="./assets/call.png" alt="" />
                                 Call
                             </button>
@@ -132,19 +330,10 @@
                             Clear
                         </button>
                     </div>
-                    <div class="history-box flex justify-between p-4 items-center bg-gray-50 rounded-2xl">
-                        <div class="details">
-                            <h2 class="service font-semibold text-[18px]">
-                                Fire Service Number
-                            </h2>
-                            <p class="number text-18px text-gray-400">
-                                999
-                            </p>
-                        </div>
-                        <p class="time text-[18px] text-gray-700">
-                            11:36:58 AM
-                        </p>
+                    <div class="history-wrapper flex flex-col gap-2">
+
                     </div>
+
                 </div>
             </div>
         </section>
