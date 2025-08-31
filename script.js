@@ -61,5 +61,5 @@ for (let copyBtn of copyButtons) {
 const clearBtn = document.getElementById("clear");
 clearBtn.addEventListener("click", () => {
   const historyWrapper = document.getElementsByClassName("history-wrapper")[0];
-  historyWrapper.innerHTML = ""; // remove all history
+  historyWrapper.innerHTML = "";
 });
