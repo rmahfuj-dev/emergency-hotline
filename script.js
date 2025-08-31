@@ -55,3 +55,11 @@ for (let copyBtn of copyButtons) {
     alert(`Copied the number : ${copiedNumber}`);
   });
 }
+
+
+// Clear history functionality
+const clearBtn = document.getElementById("clear");
+clearBtn.addEventListener("click", () => {
+  const historyWrapper = document.getElementsByClassName("history-wrapper")[0];
+  historyWrapper.innerHTML = ""; // remove all history
+});
