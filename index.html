@@ -40,7 +40,7 @@
                     <div
                         class="life flex rounded-[50px] bg-green-100 p-3 w-[123px] gap-[10px] justify-center items-center">
                         <span>
-                            <p class="text-base font-semibold">0</p>
+                            <p id="life-count" class="text-base font-semibold">0</p>
                         </span>
                         <img src="./assets/heart.png" alt=""
                             class="heart w-[25.79px] h-[22.99px] mx-[2.11px] my-[3.51px]" />
@@ -49,7 +49,7 @@
                     <div
                         class="coin flex justify-center gap-[10px] bg-green-100 w-[103px] items-center p-3 rounded-[50px]">
                         <span>
-                            <p class="text-base font-semibold">100</p>
+                            <p id="coin-count" class="text-base font-semibold">100</p>
                         </span>
                         <img src="./assets/coin.png" alt="" class="coin w-[23.25px] h-[23.22px]" />
                     </div>
@@ -75,7 +75,7 @@
                 </p>
             </div>
         </section>
-        <section class="emergency">
+        <section class="emergency mx-[3%] 2xl:mx-0">
             <div
                 class="emergency-container  max-w-[1800px] grid grid-cols-1 2xl:grid-cols-4 gap-[30px] mx-auto xl:grid-cols-3">
                 <div
@@ -86,10 +86,10 @@
                                 <img src="./assets/emergency.png" alt="" class="w-8 h-8" />
                             </div>
 
-                            <img src="./assets/heart2.png" alt="" class="w-[20px] h-[18.35px] hover:cursor-pointer" />
+                            <img id="life" src="./assets/heart2.png" alt="" class="w-[20px] h-[18.35px] hover:cursor-pointer" />
                         </div>
                         <div class="card-heading mb-2">
-                            <h2 class="font-bold text-[24px]" style="font-family: 'Hind Madurai', sans-serif">
+                            <h2 class="font-bold text-[24px] service" style="font-family: 'Hind Madurai', sans-serif">
                                 National Emergency Number
                             </h2>
                             <p class="text-[18px] text-gray-500">National Emergency</p>
@@ -112,7 +112,7 @@
                                 Copy
                             </button>
                             <button id="call"
-                                class="border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] bg-green-600 text-white hover:cursor-pointer">
+                                class="border border-gray-200 py-4 px-12 flex gap-2 rounded-xl items-center w-[182px] bg-green-600 text-white hover:cursor-pointer justify-center">
                                 <img src="./assets/call.png" alt="" />
                                 Call
                             </button>
@@ -148,6 +148,7 @@
             </div>
         </section>
     </main>
+    <script src="script.js"></script>
 </body>
 
 </html>
